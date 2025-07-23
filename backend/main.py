@@ -28,7 +28,7 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # This allows all origins
+    allow_origins=["https://my-app-frontend-8at5.onrender.com"], # This allows all origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
