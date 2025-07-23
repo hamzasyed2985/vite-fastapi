@@ -57,7 +57,7 @@ async def visit_agoda_homepage(p):
     user_agent = random.choice(USER_AGENTS[browser_name])
     print(f"Using user agent: {user_agent}")
     browser = await p.chromium.launch(
-        headless=False,
+        headless=True,
         args=['--disable-blink-features=AutomationControlled']
     )
     context = await browser.new_context(
