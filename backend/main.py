@@ -335,5 +335,6 @@ async def get_hotel_reviews(hotel_id: str):
 # Run the server
 if __name__ == "__main__":
     import uvicorn
-    logger.info("Starting the Hotel API Server...")
-    uvicorn.run(app, host="localhost", port=8000)
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
